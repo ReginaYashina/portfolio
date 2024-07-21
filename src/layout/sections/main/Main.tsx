@@ -23,7 +23,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 100vh;
   background-color: #e6f7fe;
 `;
 
@@ -32,8 +31,7 @@ const MainTitle = styled.h1``;
 const Description = styled.p``;
 const MainLink = styled.a``;
 const Photo = styled.img`
-  width: 950px;
-  height: 936px;
+  width: 50%;
   object-fit: cover;
   object-position: 0 20%;
 `;
