@@ -5,6 +5,7 @@ type FlexWrapperPropsType = {
   align?: string;
   wrap?: string;
   direction?: string;
+  basis?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -13,4 +14,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   flex-direction: ${(props) => props.direction || "row"};
+  flex-basis: ${(props) => props.basis || "50%"};
 `;

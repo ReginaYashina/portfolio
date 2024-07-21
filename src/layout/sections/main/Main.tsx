@@ -33,5 +33,4 @@ const MainLink = styled.a``;
 const Photo = styled.img`
   width: 50%;
   object-fit: cover;
-  object-position: 0 20%;
 `;

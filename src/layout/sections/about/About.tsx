@@ -21,7 +21,7 @@ export const About = () => {
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta explicabo.{" "}
+            dicta explicabo.
           </SectionText>
           <SectionText>
             Itaque earum rerum hic tenetur a sapiente delectus, ut aut
@@ -38,5 +38,5 @@ export const About = () => {
 
 const StyledAbout = styled.section`
   min-height: 20vh;
-  background-color: #ffe8e8;
+  background-color: #e6e7fe;
 `;
