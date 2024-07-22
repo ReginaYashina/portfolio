@@ -1,4 +1,5 @@
 import './App.css';
+import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
 import { About } from './layout/sections/about/About';
 import { Main } from './layout/sections/main/Main';
@@ -15,6 +16,7 @@ function App() {
       <Skills />
       <Works />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
