@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import photo from "../../../assets/img/photo.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import photo from '../../../assets/img/photo.jpg';
 
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper justify={"space-between"} align={"center"}>
-        <FlexWrapper direction={"column"} align={"flex-start"}>
+      <FlexWrapper justify={'space-between'} align={'center'}>
+        <FlexWrapper direction={'column'} align={'flex-start'}>
           <Greetings>hi! everyone</Greetings>
           <MainTitle>regina yashina a web developer</MainTitle>
           <Description>
@@ -31,6 +31,6 @@ const MainTitle = styled.h1``;
 const Description = styled.p``;
 const MainLink = styled.a``;
 const Photo = styled.img`
-  width: 50%;
+  width: 15%;
   object-fit: cover;
 `;
