@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { Menu } from '../../components/menu/Menu';
+
+const socialLinks = ['Facebook', 'Twitter', 'LinkedIn', 'Youtube'];
 
 export const Footer = () => {
   return (
@@ -11,7 +14,7 @@ export const Footer = () => {
           Just feel free to contact if you wanna collaborate with me, or simply
           have a conversation.
         </FooterText>
-        <SocialsList></SocialsList>
+        <Menu menuItems={socialLinks} />
       </FlexWrapper>
       <FlexWrapper>
         <Mail>Creatify@gmail.com</Mail>
@@ -28,5 +31,4 @@ const StyledFooter = styled.footer`
 
 const FooterTitle = styled.h2``;
 const FooterText = styled.p``;
-const SocialsList = styled.ul``;
 const Mail = styled.a``;

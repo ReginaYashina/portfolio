@@ -12,7 +12,7 @@ export const Gallery = (props: GalleryPropsType) => {
       {props.galleryItems.map((item: any) => {
         return <GalleryItem src={item} alt='' />;
       })}
-      <SectionLink>view all works</SectionLink>
+      <SectionLink href={''}>view all works</SectionLink>
     </StyledGallery>
   );
 };
