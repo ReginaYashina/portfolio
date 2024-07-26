@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import photo from '../../../assets/img/photo.jpg';
+import photo from '../../../assets/img/testimonial-1.jpg';
 
 export const Main = () => {
   return (
@@ -23,7 +23,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  background-color: #e6f7fe;
+  min-height: 936px;
 `;
 
 const Greetings = styled.p``;
@@ -31,6 +31,6 @@ const MainTitle = styled.h1``;
 const Description = styled.p``;
 const MainLink = styled.a``;
 const Photo = styled.img`
-  width: 15%;
+  width: 49%;
   object-fit: cover;
 `;
