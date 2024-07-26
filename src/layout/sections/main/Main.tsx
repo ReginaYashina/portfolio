@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import photo from '../../../assets/img/testimonial-1.jpg';
+import { Column } from '../../../components/Column';
+import { Container } from '../../../components/Container';
 
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper justify={'space-between'} align={'center'}>
-        <FlexWrapper direction={'column'} align={'flex-start'}>
+      <Container>
+        <Column>
           <Greetings>hi! everyone</Greetings>
           <MainTitle>regina yashina a web developer</MainTitle>
           <Description>
@@ -15,15 +17,22 @@ export const Main = () => {
             social media and magazines.
           </Description>
           <MainLink href=''>get in touch</MainLink>
-        </FlexWrapper>
+        </Column>
         <Photo src={photo} alt='photo' />
-      </FlexWrapper>
+      </Container>
     </StyledMain>
   );
 };
 
 const StyledMain = styled.section`
-  min-height: 936px;
+  position: relative;
+  padding: 0;
+
+  ${Container} {
+    min-height: 936px;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const Greetings = styled.p``;
@@ -33,4 +42,8 @@ const MainLink = styled.a``;
 const Photo = styled.img`
   width: 49%;
   object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  right: 0;
 `;
