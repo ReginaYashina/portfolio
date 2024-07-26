@@ -1,28 +1,33 @@
-import React from "react";
-import styled from "styled-components";
-import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import React from 'react';
+import styled from 'styled-components';
+import { Logo } from '../../components/logo/Logo';
+import { Menu } from '../../components/menu/Menu';
+import { Container } from '../../components/Container';
 
 const items = [
-  "home",
-  "who am i",
-  "my skills",
-  "portfolio",
-  "testimonials",
-  "contacts",
+  'home',
+  'who am i',
+  'my skills',
+  'portfolio',
+  'testimonials',
+  'contacts',
 ];
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Menu menuItems={items} />
+      <Container>
+        <Logo />
+        <Menu menuItems={items} />
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
-  background-color: #ffe8e8;
+  ${Container} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
