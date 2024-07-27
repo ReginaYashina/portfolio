@@ -45,4 +45,6 @@ const StyledGallery = styled.div`
   text-align: center;
 `;
 
-const GalleryItem = styled.img``;
+const GalleryItem = styled.img`
+  border-radius: 8px;
+`;
