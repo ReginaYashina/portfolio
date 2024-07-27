@@ -14,6 +14,7 @@ export const SectionLink = styled.a`
   text-transform: uppercase;
   text-align: center;
   color: ${theme.colors.lightFont};
+  border: 1px solid ${theme.colors.primaryFont};
 
   &:hover {
     background-color: ${theme.colors.lightFont};

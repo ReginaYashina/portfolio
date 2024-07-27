@@ -1,6 +1,6 @@
-import React from 'react';
-import { styled } from 'styled-components';
-import { SectionLink } from '../../../components/SectionLink';
+import React from "react";
+import { styled } from "styled-components";
+import { SectionLink } from "../../../components/SectionLink";
 
 type GalleryPropsType = {
   galleryItems: Array<any>;
@@ -12,7 +12,7 @@ export const Gallery = (props: GalleryPropsType) => {
       {props.galleryItems.map((item: any) => {
         return <GalleryItem src={item} alt='' />;
       })}
-      <SectionLink href={''}>view all works</SectionLink>
+      <SectionLink href={""}>view all works</SectionLink>
     </StyledGallery>
   );
 };
