@@ -12,7 +12,7 @@ export const About = () => {
   return (
     <StyledAbout>
       <Container>
-        <FlexWrapper justify={"space-between"} align={"center"}>
+        <FlexWrapper justify={"space-between"}>
           <Column>
             <SectionTitle>who am i</SectionTitle>
             <SectionDescription>
