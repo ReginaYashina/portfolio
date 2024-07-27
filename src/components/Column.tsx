@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
-export const Column = styled.div`
-  width: 50%;
+type ColumnPropsType = {
+  width?: string;
+};
+
+export const Column = styled.div<ColumnPropsType>`
+  width: ${(props) => props.width || "50%"};
 `;
