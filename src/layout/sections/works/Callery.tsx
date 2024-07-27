@@ -12,10 +12,6 @@ import galleryImg8 from "../../../assets/img/works/8.jpg";
 import galleryImg9 from "../../../assets/img/works/9.jpg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
-// type GalleryPropsType = {
-//   galleryItems: Array<any>;
-// };
-
 export const Gallery = () => {
   return (
     <StyledGallery>
@@ -47,4 +43,5 @@ const StyledGallery = styled.div`
 
 const GalleryItem = styled.img`
   border-radius: 8px;
+  max-width: 100%;
 `;

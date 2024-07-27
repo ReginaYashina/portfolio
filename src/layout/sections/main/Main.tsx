@@ -4,6 +4,7 @@ import photo from "../../../assets/img/tmp.png";
 import { Container } from "../../../components/Container";
 import handIcon from "../../../assets/img/hand.svg";
 import arrow from "../../../assets/img/arrow.svg";
+import decor from "../../../assets/img/pattern.svg";
 import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
@@ -33,6 +34,8 @@ const StyledMain = styled.section`
   display: flex;
   padding: 0;
   overflow: hidden;
+  background-image: url(${decor});
+  background-repeat: no-repeat;
 
   ${Container} {
     display: flex;
