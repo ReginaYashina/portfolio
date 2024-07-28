@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { Menu } from "../../components/menu/Menu";
 import { Column } from "../../components/Column";
 import { Container } from "../../components/Container";
 import decor from "../../assets/img/pattern-bottom.svg";
 import { theme } from "../../styles/Theme";
+import { FooterMenu } from "./footerMenu/FooterMenu";
 
-const socialLinks = ["Facebook", "Twitter", "LinkedIn", "Youtube"];
+// const socialLinks = ["Facebook", "Twitter", "LinkedIn", "Youtube"];
 
 export const Footer = () => {
   return (
@@ -22,7 +22,8 @@ export const Footer = () => {
             Just feel free to contact if you wanna collaborate with me, or
             simply have a conversation.
           </FooterText>
-          <Menu menuItems={socialLinks} />
+          {/* <FooterMenu menuItems={socialLinks} /> */}
+          <FooterMenu />
         </Column>
         <FlexWrapper>
           <Mail>Creatify@gmail.com</Mail>
