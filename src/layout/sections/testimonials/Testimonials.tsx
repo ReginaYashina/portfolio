@@ -1,16 +1,16 @@
-import React from "react";
-import { styled } from "styled-components";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import image from "../../../assets/img/testimonial-2.jpg";
-import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
+import React from 'react';
+import { styled } from 'styled-components';
+import { SectionTitle } from '../../../components/SectionTitle';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import image from '../../../assets/img/testimonial-2.jpg';
+import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/Theme';
 
 export const Testimonials = () => {
   return (
     <StyledTestimonials>
       <ImageWrapper>
-        <Image src={image} />
+        <Image src={image} alt='Lucas Wolfers photo' />
       </ImageWrapper>
       <Container>
         <TestimonyContent>

@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { theme } from "../styles/Theme";
+import { styled } from 'styled-components';
+import { theme } from '../styles/Theme';
 
 export const SectionLink = styled.a`
   display: inline-block;
@@ -15,6 +15,7 @@ export const SectionLink = styled.a`
   text-align: center;
   color: ${theme.colors.lightFont};
   border: 1px solid ${theme.colors.primaryFont};
+  transition: all 0.5s ease;
 
   &:hover {
     background-color: ${theme.colors.lightFont};

@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import photo from "../../../assets/img/tmp.png";
-import { Container } from "../../../components/Container";
-import handIcon from "../../../assets/img/hand.svg";
-import arrow from "../../../assets/img/arrow.svg";
-import decor from "../../../assets/img/pattern.svg";
-import { theme } from "../../../styles/Theme";
+import React from 'react';
+import styled from 'styled-components';
+import photo from '../../../assets/img/tmp.png';
+import { Container } from '../../../components/Container';
+import handIcon from '../../../assets/img/hand.svg';
+import arrow from '../../../assets/img/arrow.svg';
+import decor from '../../../assets/img/pattern.svg';
+import { theme } from '../../../styles/Theme';
 
 export const Main = () => {
   return (
@@ -69,7 +69,7 @@ const Photo = styled.img`
 `;
 
 const Greetings = styled.p`
-  font-family: "Inconsolata", sans-serif;
+  font-family: 'Inconsolata', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 126%;
@@ -109,7 +109,7 @@ const MainLink = styled.a`
   display: inline-block;
   width: 251px;
   height: 65px;
-  border: 2px solid #e2e2e2;
+  border: 2px solid ${theme.colors.mainBtnBorder};
   border-radius: 40px;
   margin-top: 74px;
   padding-left: 37px;
@@ -126,12 +126,14 @@ const MainLink = styled.a`
 
   position: relative;
 
+  transition: all 0.5s ease;
+
   &:before {
-    content: "";
+    content: '';
     width: 62px;
     height: 62px;
     border-radius: 100%;
-    background-color: #131313;
+    background-color: ${theme.colors.mainBtnBg};
     background-image: url(${arrow});
     background-repeat: no-repeat;
     background-position: center;
@@ -139,5 +141,16 @@ const MainLink = styled.a`
     position: absolute;
     top: 0;
     right: 0;
+
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    background-color: ${theme.colors.mainBtnBorder};
+    color: ${theme.colors.lightFont};
+    &:before {
+      content: '';
+      transform: scale(1.05);
+    }
   }
 `;

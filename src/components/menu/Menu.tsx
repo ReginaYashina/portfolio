@@ -1,6 +1,6 @@
-import React from "react";
-import { styled } from "styled-components";
-import { theme } from "../../styles/Theme";
+import React from 'react';
+import { styled } from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 type MenuPropsType = {
   menuItems: Array<string>;
@@ -9,10 +9,10 @@ type MenuPropsType = {
 export const Menu = (props: MenuPropsType) => {
   return (
     <StyledNav>
-      <ul>
+      <ul role='menu'>
         {props.menuItems.map((item: string, index: number) => {
           return (
-            <li key={index}>
+            <li key={index} role='menuitem'>
               <a href='#'>{item}</a>
             </li>
           );
@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
 
   a {
     color: ${theme.colors.secondaryFont};
-    font-family: "Inconsolata", sans-serif;
+    font-family: 'Inconsolata', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 126%;
@@ -43,7 +43,7 @@ const StyledNav = styled.nav`
     position: relative;
 
     &:before {
-      content: "";
+      content: '';
       height: 1px;
       width: 0;
       background-color: ${theme.colors.secondaryFont};
@@ -56,7 +56,7 @@ const StyledNav = styled.nav`
     }
     &:hover {
       &:before {
-        content: "";
+        content: '';
         width: 100%;
       }
     }
