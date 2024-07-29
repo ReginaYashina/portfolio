@@ -54,6 +54,8 @@ section:nth-of-type(even){
 	background-color: ${theme.colors.secondaryBg};
 }
 
-
+@media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 
 `;
