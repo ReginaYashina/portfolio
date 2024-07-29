@@ -61,4 +61,8 @@ const StyledNav = styled.nav`
       }
     }
   }
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;

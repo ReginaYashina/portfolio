@@ -1,16 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
-import { Container } from "../../components/Container";
+import React from 'react';
+import styled from 'styled-components';
+import { Logo } from '../../components/logo/Logo';
+import { Menu } from '../../components/menu/Menu';
+import { Container } from '../../components/Container';
+import { MobileMenu } from '../../components/mobileMenu/MobileMenu';
 
 const items = [
-  "home",
-  "who am i",
-  "my skills",
-  "portfolio",
-  "testimonials",
-  "contacts",
+  'home',
+  'who am i',
+  'my skills',
+  'portfolio',
+  'testimonials',
+  'contacts',
 ];
 
 export const Header = () => {
@@ -19,6 +20,7 @@ export const Header = () => {
       <Container>
         <Logo />
         <Menu menuItems={items} />
+        <MobileMenu menuItems={items} />
       </Container>
     </StyledHeader>
   );
