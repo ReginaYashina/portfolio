@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { Column } from "../../components/Column";
-import { Container } from "../../components/Container";
-import decor from "../../assets/img/pattern-bottom.svg";
-import { theme } from "../../styles/Theme";
-import { FooterMenu } from "./footerMenu/FooterMenu";
+import React from 'react';
+import styled from 'styled-components';
+import { FlexWrapper } from '../../components/FlexWrapper';
+import { Column } from '../../components/Column';
+import { Container } from '../../components/Container';
+import decor from '../../assets/img/pattern-bottom.svg';
+import { theme } from '../../styles/Theme';
+import { FooterMenu } from './footerMenu/FooterMenu';
 
 // const socialLinks = ["Facebook", "Twitter", "LinkedIn", "Youtube"];
 
@@ -71,7 +71,13 @@ const Mail = styled.a`
   letter-spacing: 0.01em;
   color: ${theme.colors.primaryFont};
   border-bottom: 2px solid ${theme.colors.primaryFont};
+  cursor: pointer;
 
   position: absolute;
   bottom: 45px;
+
+  transition: all ease 0.3s;
+  &:hover {
+    transform: scale(0.98);
+  }
 `;

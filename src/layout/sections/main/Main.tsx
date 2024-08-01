@@ -130,8 +130,8 @@ const MainLink = styled.a`
 
   &:before {
     content: '';
-    width: 62px;
-    height: 62px;
+    width: 61px;
+    height: 61px;
     border-radius: 100%;
     background-color: ${theme.colors.mainBtnBg};
     background-image: url(${arrow});
@@ -146,11 +146,12 @@ const MainLink = styled.a`
   }
 
   &:hover {
-    background-color: ${theme.colors.mainBtnBorder};
+    /* background-color: ${theme.colors.mainBtnBorder}; */
     color: ${theme.colors.lightFont};
+    background-color: ${theme.colors.mainBtnBg};
     &:before {
       content: '';
-      transform: scale(1.05);
+      /* transform: scale(1.05); */
     }
   }
 `;

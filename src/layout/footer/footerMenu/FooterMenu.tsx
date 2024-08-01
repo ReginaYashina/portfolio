@@ -1,47 +1,42 @@
-import React from "react";
-import { styled } from "styled-components";
-import { theme } from "../../../styles/Theme";
-import facebook from "../../../assets/img/facebook.svg";
-import twitter from "../../../assets/img/twitter.svg";
-import linkedin from "../../../assets/img/linkedin.svg";
-import youtube from "../../../assets/img/youtube.svg";
+import React from 'react';
+import { styled } from 'styled-components';
+import { theme } from '../../../styles/Theme';
+import facebook from '../../../assets/img/facebook.svg';
+import twitter from '../../../assets/img/twitter.svg';
+import linkedin from '../../../assets/img/linkedin.svg';
+import youtube from '../../../assets/img/youtube.svg';
 
-// type FooterMenuPropsType = {
-//   menuItems: Array<string>;
-// };
-
-// export const FooterMenu = (props: FooterMenuPropsType) => {
-//   return (
-//     <StyledNav>
-//       <ul>
-//         {props.menuItems.map((item: string, index: number) => {
-//           return (
-//             <li key={index}>
-//               <a href='#'>{item}</a>
-//             </li>
-//           );
-//         })}
-//       </ul>
-//     </StyledNav>
-//   );
-// };
+const data = [
+  {
+    iconSrc: facebook,
+    title: 'Facebook',
+  },
+  {
+    iconSrc: twitter,
+    title: 'Twitter',
+  },
+  {
+    iconSrc: linkedin,
+    title: 'Linkedin',
+  },
+  {
+    iconSrc: youtube,
+    title: 'Youtube',
+  },
+];
 
 export const FooterMenu = () => {
   return (
     <StyledNav>
       <ul>
-        <li>
-          <a href='#'>Facebook</a>
-        </li>
-        <li>
-          <a href='#'>Twitter</a>
-        </li>
-        <li>
-          <a href='#'>LinkedIn</a>
-        </li>
-        <li>
-          <a href='#'>Youtube</a>
-        </li>
+        {data.map((elem, index) => {
+          return (
+            <li key={index}>
+              <img src={elem.iconSrc} alt='' />
+              <a href='#'>{elem.title}</a>
+            </li>
+          );
+        })}
       </ul>
     </StyledNav>
   );
@@ -53,38 +48,9 @@ const StyledNav = styled.nav`
   }
 
   li {
-    padding-left: 30px;
-    position: relative;
-
-    &:before {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    &:nth-child(1) {
-      padding-left: 20px;
-      &:before {
-        content: url(${facebook});
-      }
-    }
-    &:nth-child(2) {
-      &:before {
-        content: url(${twitter});
-      }
-    }
-    &:nth-child(3) {
-      &:before {
-        content: url(${linkedin});
-      }
-    }
-    &:nth-child(4) {
-      &:before {
-        content: url(${youtube});
-      }
+    transition: all ease 0.3s;
+    &:hover {
+      transform: scale(0.95);
     }
   }
 
@@ -98,5 +64,8 @@ const StyledNav = styled.nav`
     font-size: 20px;
     line-height: 225%;
     border-bottom: 1px solid ${theme.colors.secondaryFont};
+  }
+  img {
+    margin-right: 10px;
   }
 `;

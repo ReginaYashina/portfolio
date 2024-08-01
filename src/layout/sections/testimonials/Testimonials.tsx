@@ -23,6 +23,12 @@ export const Testimonials = () => {
           <Name>Lucas wolfer</Name>
           <Profession>ceo - raisins</Profession>
         </TestimonyContent>
+
+        <Dots>
+          <Dot className={'active'}></Dot>
+          <Dot></Dot>
+          <Dot></Dot>
+        </Dots>
       </Container>
     </StyledTestimonials>
   );
@@ -92,4 +98,32 @@ const Profession = styled.p`
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #737373;
+`;
+
+const Dots = styled.div`
+  position: absolute;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+`;
+const Dot = styled.div`
+  width: 25px;
+  height: 25px;
+  background-color: ${theme.colors.mainBtnBg};
+
+  transition: all ease 0.3s;
+
+  &.active {
+    background-color: ${theme.colors.lightFont};
+    border: 1px solid ${theme.colors.mainBtnBg};
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    transform: scale(0.9);
+  }
 `;
