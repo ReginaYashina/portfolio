@@ -79,7 +79,7 @@ const MobileMenuWrapper = styled.div`
   width: 320px;
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 2px 10px 0px rgba(130, 130, 130, 0.2);
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
