@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import photo from '../../../assets/img/tmp.png';
-import { Container } from '../../../components/Container';
-import handIcon from '../../../assets/img/hand.svg';
-import arrow from '../../../assets/img/arrow.svg';
-import decor from '../../../assets/img/pattern.svg';
-import { theme } from '../../../styles/Theme';
+import React from "react";
+import styled from "styled-components";
+import photo from "../../../assets/img/tmp.png";
+import { Container } from "../../../components/Container";
+import handIcon from "../../../assets/img/hand.svg";
+import arrow from "../../../assets/img/arrow.svg";
+import decor from "../../../assets/img/pattern.svg";
+import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
@@ -14,7 +15,10 @@ export const Main = () => {
         <Container>
           <MainContent>
             <Greetings>hi! everyone</Greetings>
-            <MainTitle>regina yashina web developer</MainTitle>
+            <MainTitle>
+              <p>regina yashina </p>
+              <p>web developer</p>
+            </MainTitle>
             <Description>
               Make designs mainly logos, visual identities, apps & websites,
               social media and magazines.
@@ -41,14 +45,29 @@ const StyledMain = styled.section`
     display: flex;
     align-items: center;
   }
+
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    padding-bottom: 80px;
+  }
 `;
 const MainContentWrapper = styled.div`
   flex: 0 0 100%;
   display: flex;
+  @media ${theme.media.tablet} {
+    order: 2;
+  }
 `;
 const MainContent = styled.div`
   width: 50%;
   padding-right: 70px;
+  margin-top: 75px;
+
+  @media ${theme.media.tablet} {
+    width: 100%;
+    padding: 0;
+    margin-top: 35px;
+  }
 `;
 const PhotoWrapper = styled.div`
   flex: 0 0 50%;
@@ -56,6 +75,13 @@ const PhotoWrapper = styled.div`
   padding-bottom: 49.2%;
 
   position: relative;
+
+  @media ${theme.media.tablet} {
+    flex: 0 0 100%;
+    transform: translateX(0);
+    padding-bottom: 0;
+    order: 1;
+  }
 `;
 const Photo = styled.img`
   max-width: 100%;
@@ -66,16 +92,25 @@ const Photo = styled.img`
   height: 100%;
   top: 0;
   left: 0;
+
+  @media ${theme.media.tablet} {
+    position: relative;
+    width: 100%;
+  }
 `;
 
 const Greetings = styled.p`
-  font-family: 'Inconsolata', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 126%;
+  ${font({
+    family: '"Inconsolata", sans-serif',
+    weight: 400,
+    lineHeight: "126%",
+    color: "#717171",
+    Fmax: 18,
+    Fmin: 16,
+  })}
+
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #717171;
   padding-left: 39px;
 
   position: relative;
@@ -90,20 +125,33 @@ const Greetings = styled.p`
   }
 `;
 const MainTitle = styled.h1`
+  ${font({
+    weight: 700,
+    lineHeight: "122%",
+    Fmax: 74,
+    Fmin: 40,
+  })}
   margin: 42px 0 31px;
-  font-weight: 700;
-  font-size: 74px;
-  line-height: 122%;
   letter-spacing: -0.02em;
   text-transform: capitalize;
-  color: ${theme.colors.primaryFont};
+
+  & p {
+    white-space: nowrap;
+  }
+
+  @media ${theme.media.tablet} {
+    margin: 30px 0 20px;
+  }
 `;
 const Description = styled.p`
-  font-weight: 300;
-  font-size: 19px;
-  line-height: 235%;
+  ${font({
+    weight: 300,
+    lineHeight: "235%",
+    color: theme.colors.secondaryFont,
+    Fmax: 19,
+    Fmin: 16,
+  })}
   letter-spacing: 0.02em;
-  color: ${theme.colors.secondaryFont};
 `;
 const MainLink = styled.a`
   display: inline-block;
@@ -129,7 +177,7 @@ const MainLink = styled.a`
   transition: all 0.5s ease;
 
   &:before {
-    content: '';
+    content: "";
     width: 61px;
     height: 61px;
     border-radius: 100%;
@@ -150,8 +198,12 @@ const MainLink = styled.a`
     color: ${theme.colors.lightFont};
     background-color: ${theme.colors.mainBtnBg};
     &:before {
-      content: '';
+      content: "";
       /* transform: scale(1.05); */
     }
+  }
+
+  @media ${theme.media.tablet} {
+    margin-top: 45px;
   }
 `;

@@ -1,19 +1,20 @@
 export const theme = {
   colors: {
-    primaryBg: '#FAFBFC',
-    secondaryBg: '#ffffff',
+    primaryBg: "#FAFBFC",
+    secondaryBg: "#ffffff",
 
-    mainBtnBg: '#131313',
-    mainBtnBorder: '#e2e2e2',
+    mainBtnBg: "#131313",
+    mainBtnBorder: "#e2e2e2",
 
-    primaryFont: '#111111',
-    secondaryFont: '#282828',
-    lightFont: '#ffffff',
+    primaryFont: "#111111",
+    secondaryFont: "#282828",
+    lightFont: "#ffffff",
   },
 
   media: {
-    tablet: 'screen and (max-width: 768px)',
-    mobile: 'screen and (max-width: 576px)',
+    bigTablet: "screen and (max-width: 920px)",
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
   },
 };
 

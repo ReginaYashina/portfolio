@@ -1,6 +1,7 @@
-import React from 'react';
-import { styled } from 'styled-components';
-import { theme } from '../../styles/Theme';
+import React from "react";
+import { styled } from "styled-components";
+import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 type MenuPropsType = {
   menuItems: Array<string>;
@@ -32,18 +33,21 @@ const StyledNav = styled.nav`
   }
 
   a {
-    color: ${theme.colors.secondaryFont};
-    font-family: 'Inconsolata', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 126%;
+    ${font({
+      family: '"Inconsolata", sans-serif',
+      weight: 400,
+      lineHeight: "126%",
+      color: theme.colors.secondaryFont,
+      Fmax: 16,
+      Fmin: 14,
+    })}
     letter-spacing: 0.2em;
     text-transform: uppercase;
 
     position: relative;
 
     &:before {
-      content: '';
+      content: "";
       height: 1px;
       width: 0;
       background-color: ${theme.colors.secondaryFont};
@@ -56,13 +60,13 @@ const StyledNav = styled.nav`
     }
     &:hover {
       &:before {
-        content: '';
+        content: "";
         width: 100%;
       }
     }
   }
 
-  @media ${theme.media.tablet} {
+  @media ${theme.media.bigTablet} {
     display: none;
   }
 `;

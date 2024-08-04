@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FlexWrapper } from '../../components/FlexWrapper';
-import { Column } from '../../components/Column';
-import { Container } from '../../components/Container';
-import decor from '../../assets/img/pattern-bottom.svg';
-import { theme } from '../../styles/Theme';
-import { FooterMenu } from './footerMenu/FooterMenu';
+import React from "react";
+import styled from "styled-components";
+import { FlexWrapper } from "../../components/FlexWrapper";
+import { Column } from "../../components/Column";
+import { Container } from "../../components/Container";
+import decor from "../../assets/img/pattern-bottom.svg";
+import { theme } from "../../styles/Theme";
+import { FooterMenu } from "./footerMenu/FooterMenu";
 
 // const socialLinks = ["Facebook", "Twitter", "LinkedIn", "Youtube"];
 
@@ -25,7 +25,7 @@ export const Footer = () => {
           {/* <FooterMenu menuItems={socialLinks} /> */}
           <FooterMenu />
         </Column>
-        <FlexWrapper>
+        <FlexWrapper align={"flex-end"}>
           <Mail>Creatify@gmail.com</Mail>
         </FlexWrapper>
       </Container>
@@ -35,7 +35,6 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   padding: 166px 0 178px;
-  display: flex;
   background-color: #fff;
   background-image: url(${decor});
   background-repeat: no-repeat;
@@ -45,7 +44,7 @@ const StyledFooter = styled.footer`
   }
 
   & ${FlexWrapper} {
-    position: relative;
+    padding-bottom: 45px;
   }
 `;
 
@@ -73,11 +72,10 @@ const Mail = styled.a`
   border-bottom: 2px solid ${theme.colors.primaryFont};
   cursor: pointer;
 
-  position: absolute;
-  bottom: 45px;
-
   transition: all ease 0.3s;
   &:hover {
     transform: scale(0.98);
   }
+  /* TMP!!!!!! */
+  display: none;
 `;

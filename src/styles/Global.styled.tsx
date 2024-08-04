@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { theme } from './Theme';
+import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
 *, 
@@ -20,6 +20,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 	color:${theme.colors.primaryFont};
 	line-height: 1.2;
+
+  min-width: 320px;
 }
 
 code {
@@ -45,6 +47,10 @@ button{
 
 section{
 	padding: 160px 0;
+  
+  @media ${theme.media.bigTablet}{
+    padding: 80px 0;
+  }
 }
 
 section:nth-of-type(odd){
