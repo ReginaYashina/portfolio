@@ -26,15 +26,16 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const SyledSkill = styled.div`
-  & + & {
-    margin-top: 30px;
+  margin-left: 60px;
+  @media ${theme.media.bigTablet} {
+    margin-left: 0;
   }
 `;
 
 const SkillLabel = styled.div`
   ${font({
     weight: 400,
-    lineHeight: '225%',
+    lineHeight: '2.8',
     color: theme.colors.secondaryFont,
     Fmax: 19,
     Fmin: 16,
@@ -62,6 +63,6 @@ const SkillProgress = styled.div<SkillPropsType>`
 
 const Percent = styled.span`
   position: absolute;
-  right: -15px;
-  top: -29px;
+  right: -7px;
+  top: -40px;
 `;

@@ -78,7 +78,7 @@ const FooterText = styled.p`
     Fmax: 22,
     Fmin: 18,
   })}
-  margin: 26px 0 81px;
+  margin: 50px 0 74px;
   letter-spacing: 0.02em;
   padding-right: 50px;
 

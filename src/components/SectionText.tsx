@@ -11,7 +11,7 @@ export const SectionText = styled.p`
     Fmin: 16,
   })}
   letter-spacing: 0.02em;
-
+  margin-left: 60px;
   & + & {
     margin-top: 32px;
     @media ${theme.media.bigTablet} {
@@ -21,5 +21,6 @@ export const SectionText = styled.p`
 
   @media ${theme.media.bigTablet} {
     margin-top: 15px;
+    margin-left: 0;
   }
 `;

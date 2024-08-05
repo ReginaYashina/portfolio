@@ -40,4 +40,8 @@ export const About = () => {
   );
 };
 
-const StyledAbout = styled.section``;
+const StyledAbout = styled.section`
+  ${SectionLink} {
+    margin: 33px 0 0 60px;
+  }
+`;

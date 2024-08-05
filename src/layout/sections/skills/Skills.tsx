@@ -37,6 +37,6 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   & ${SectionText} {
-    margin-bottom: 45px;
+    margin-bottom: 18px;
   }
 `;

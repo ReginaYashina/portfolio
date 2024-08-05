@@ -50,6 +50,10 @@ const StyledGallery = styled.div`
       flex-basis: 100%;
     }
   }
+
+  ${SectionLink} {
+    margin-top: 84px;
+  }
 `;
 
 const GalleryItem = styled.img.attrs(({ alt }) => ({

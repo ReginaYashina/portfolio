@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import photo from "../../../assets/img/tmp.png";
-import { Container } from "../../../components/Container";
-import handIcon from "../../../assets/img/hand.svg";
-import arrow from "../../../assets/img/arrow.svg";
-import decor from "../../../assets/img/pattern.svg";
-import { theme } from "../../../styles/Theme";
-import { font } from "../../../styles/Common";
+import React from 'react';
+import styled from 'styled-components';
+import photo from '../../../assets/img/tmp.png';
+import { Container } from '../../../components/Container';
+import handIcon from '../../../assets/img/hand.svg';
+import arrow from '../../../assets/img/arrow.svg';
+import decor from '../../../assets/img/pattern.svg';
+import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 export const Main = () => {
   return (
@@ -61,7 +61,7 @@ const MainContentWrapper = styled.div`
 const MainContent = styled.div`
   width: 50%;
   padding-right: 70px;
-  margin-top: 75px;
+  margin-top: 80px;
 
   @media ${theme.media.tablet} {
     width: 100%;
@@ -103,8 +103,8 @@ const Greetings = styled.p`
   ${font({
     family: '"Inconsolata", sans-serif',
     weight: 400,
-    lineHeight: "126%",
-    color: "#717171",
+    lineHeight: '126%',
+    color: '#717171',
     Fmax: 18,
     Fmin: 16,
   })}
@@ -127,7 +127,7 @@ const Greetings = styled.p`
 const MainTitle = styled.h1`
   ${font({
     weight: 700,
-    lineHeight: "122%",
+    lineHeight: '122%',
     Fmax: 74,
     Fmin: 40,
   })}
@@ -146,7 +146,7 @@ const MainTitle = styled.h1`
 const Description = styled.p`
   ${font({
     weight: 300,
-    lineHeight: "235%",
+    lineHeight: '235%',
     color: theme.colors.secondaryFont,
     Fmax: 19,
     Fmin: 16,
@@ -159,25 +159,21 @@ const MainLink = styled.a`
   height: 65px;
   border: 2px solid ${theme.colors.mainBtnBorder};
   border-radius: 40px;
-  margin-top: 74px;
+  margin-top: 50px;
   padding-left: 37px;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 235%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: ${theme.colors.primaryFont};
-
   display: flex;
   align-items: center;
-
   position: relative;
-
   transition: all 0.5s ease;
 
   &:before {
-    content: "";
+    content: '';
     width: 61px;
     height: 61px;
     border-radius: 100%;
@@ -194,13 +190,12 @@ const MainLink = styled.a`
   }
 
   &:hover {
-    /* background-color: ${theme.colors.mainBtnBorder}; */
     color: ${theme.colors.lightFont};
     background-color: ${theme.colors.mainBtnBg};
-    &:before {
-      content: "";
-      /* transform: scale(1.05); */
-    }
+  }
+
+  @media ${theme.media.bigTablet} {
+    margin-bottom: 30px;
   }
 
   @media ${theme.media.tablet} {
