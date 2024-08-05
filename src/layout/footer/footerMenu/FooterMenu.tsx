@@ -32,8 +32,10 @@ export const FooterMenu = () => {
         {data.map((elem, index) => {
           return (
             <li key={index}>
-              <img src={elem.iconSrc} alt='' />
-              <a href='#'>{elem.title}</a>
+              <a href='#'>
+                <img src={elem.iconSrc} alt='' />
+                <span>{elem.title}</span>
+              </a>
             </li>
           );
         })}
@@ -63,9 +65,27 @@ const StyledNav = styled.nav`
     font-weight: 400;
     font-size: 20px;
     line-height: 225%;
+
+    @media ${theme.media.mobile} {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  span {
     border-bottom: 1px solid ${theme.colors.secondaryFont};
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   }
   img {
     margin-right: 10px;
+
+    @media ${theme.media.mobile} {
+      margin-right: 0;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
   }
 `;

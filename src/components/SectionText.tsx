@@ -1,14 +1,25 @@
-import styled from "styled-components";
-import { theme } from "../styles/Theme";
+import styled from 'styled-components';
+import { theme } from '../styles/Theme';
+import { font } from '../styles/Common';
 
 export const SectionText = styled.p`
-  font-weight: 300;
-  font-size: 19px;
-  line-height: 225%;
+  ${font({
+    weight: 300,
+    lineHeight: '225%',
+    color: theme.colors.secondaryFont,
+    Fmax: 19,
+    Fmin: 16,
+  })}
   letter-spacing: 0.02em;
-  color: ${theme.colors.secondaryFont};
 
   & + & {
     margin-top: 32px;
+    @media ${theme.media.bigTablet} {
+      margin-top: 15px;
+    }
+  }
+
+  @media ${theme.media.bigTablet} {
+    margin-top: 15px;
   }
 `;

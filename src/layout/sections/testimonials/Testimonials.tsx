@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import image from '../../../assets/img/testimonial-2.jpg';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 export const Testimonials = () => {
   return (
@@ -51,12 +52,27 @@ const StyledTestimonials = styled.section`
     justify-content: end;
     align-items: center;
     padding: 125px 0 137px;
+
+    @media ${theme.media.tablet} {
+      position: relative;
+      transform: translate(0);
+      top: 0;
+      left: 0;
+      padding: 0 15px;
+      justify-content: start;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    padding: 80px 0;
   }
 `;
 
 const TestimonyContent = styled.div`
   flex: 0 0 59%;
-
+  @media ${theme.media.tablet} {
+    flex: 0 0 100%;
+  }
   /* padding: 15px 15px 15px 140px; */
 `;
 
@@ -64,6 +80,12 @@ const ImageWrapper = styled.div`
   flex: 0 0 39%;
   padding-bottom: 37%;
   position: relative;
+  @media ${theme.media.bigTablet} {
+    padding-bottom: 50%;
+  }
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
@@ -78,16 +100,25 @@ const Image = styled.img`
 `;
 
 const Text = styled.p`
-  font-weight: 400;
-  font-size: 29px;
-  line-height: 183%;
+  ${font({
+    weight: 400,
+    lineHeight: '183%',
+    Fmax: 29,
+    Fmin: 19,
+  })}
   letter-spacing: 0.01em;
   margin-bottom: 24px;
+  @media ${theme.media.bigTablet} {
+    line-height: 1.4;
+  }
 `;
 const Name = styled.p`
-  font-weight: 600;
-  font-size: 21px;
-  line-height: 225%;
+  ${font({
+    weight: 600,
+    lineHeight: '225%',
+    Fmax: 21,
+    Fmin: 16,
+  })}
   letter-spacing: 0.02em;
   text-transform: capitalize;
 `;
@@ -109,7 +140,13 @@ const Dots = styled.div`
   right: 0;
   bottom: 0;
   cursor: pointer;
+
+  @media ${theme.media.tablet} {
+    right: 15px;
+    bottom: -70px;
+  }
 `;
+
 const Dot = styled.div`
   width: 25px;
   height: 25px;
@@ -125,5 +162,10 @@ const Dot = styled.div`
 
   &:hover {
     transform: scale(0.9);
+  }
+
+  @media ${theme.media.bigTablet} {
+    width: 20px;
+    height: 20px;
   }
 `;

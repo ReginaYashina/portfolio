@@ -11,6 +11,7 @@ import galleryImg7 from '../../../assets/img/works/7.jpg';
 import galleryImg8 from '../../../assets/img/works/8.jpg';
 import galleryImg9 from '../../../assets/img/works/9.jpg';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { theme } from '../../../styles/Theme';
 
 export const Gallery = () => {
   return (
@@ -39,6 +40,16 @@ export const Gallery = () => {
 
 const StyledGallery = styled.div`
   text-align: center;
+  ${FlexWrapper} {
+    @media ${theme.media.bigTablet} {
+      gap: 10px;
+    }
+
+    @media ${theme.media.mobile} {
+      flex-wrap: wrap;
+      flex-basis: 100%;
+    }
+  }
 `;
 
 const GalleryItem = styled.img.attrs(({ alt }) => ({
@@ -48,6 +59,7 @@ const GalleryItem = styled.img.attrs(({ alt }) => ({
   max-width: 100%;
   cursor: pointer;
   transition: all 0.5s ease;
+  object-fit: cover;
 
   &:hover {
     filter: hue-rotate(270deg);

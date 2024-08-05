@@ -22,4 +22,8 @@ export const SectionLink = styled.a`
     color: ${theme.colors.primaryFont};
     border: 1px solid ${theme.colors.primaryFont};
   }
+
+  @media ${theme.media.bigTablet} {
+    margin-top: 32px;
+  }
 `;

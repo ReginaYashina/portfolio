@@ -1,8 +1,8 @@
-import React from "react";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { SectionDescription } from "../../../components/SectionDescription";
-import { styled } from "styled-components";
-import { Menu } from "../../../components/menu/Menu";
+import React from 'react';
+import { SectionTitle } from '../../../components/SectionTitle';
+import { SectionDescription } from '../../../components/SectionDescription';
+import { styled } from 'styled-components';
+import { Menu } from '../../../components/menu/Menu';
 // import galleryImg1 from "../../../assets/img/works/1.jpg";
 // import galleryImg2 from "../../../assets/img/works/2.jpg";
 // import galleryImg3 from "../../../assets/img/works/3.jpg";
@@ -12,10 +12,11 @@ import { Menu } from "../../../components/menu/Menu";
 // import galleryImg7 from "../../../assets/img/works/7.jpg";
 // import galleryImg8 from "../../../assets/img/works/8.jpg";
 // import galleryImg9 from "../../../assets/img/works/9.jpg";
-import { Container } from "../../../components/Container";
-import { Gallery } from "./Callery";
+import { Container } from '../../../components/Container';
+import { Gallery } from './Callery';
+import { theme } from '../../../styles/Theme';
 
-const items = ["All", "Landing page", "React", "SPA"];
+const items = ['All', 'Landing page', 'React', 'SPA'];
 // const galleryImages = [
 //   galleryImg1,
 //   galleryImg2,
@@ -44,10 +45,17 @@ export const Works = () => {
 const StyledWorks = styled.section`
   ${SectionTitle} {
     margin-left: 37%;
+    @media ${theme.media.bigTablet} {
+      margin-left: 0;
+    }
   }
   ${SectionDescription} {
     margin-left: 37%;
     margin-bottom: 60px;
+    @media ${theme.media.bigTablet} {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
   }
   ul {
     justify-content: center;

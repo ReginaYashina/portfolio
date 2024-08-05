@@ -2,6 +2,7 @@ import React from 'react';
 import { css, styled } from 'styled-components';
 import { theme } from '../../../../styles/Theme';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
+import { font } from '../../../../styles/Common';
 
 type SkillPropsType = {
   progressTitle?: string;
@@ -31,12 +32,16 @@ const SyledSkill = styled.div`
 `;
 
 const SkillLabel = styled.div`
+  ${font({
+    weight: 400,
+    lineHeight: '225%',
+    color: theme.colors.secondaryFont,
+    Fmax: 19,
+    Fmin: 16,
+  })}
   margin-bottom: 11px;
-  font-weight: 400;
-  font-size: 19px;
   letter-spacing: 0.03em;
   text-transform: capitalize;
-  color: ${theme.colors.primaryFont};
 `;
 
 const SkillProgressWrapper = styled.div`

@@ -1,18 +1,18 @@
-import React from "react";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import styled from "styled-components";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { SectionDescription } from "../../../components/SectionDescription";
-import { SectionText } from "../../../components/SectionText";
-import { SectionLink } from "../../../components/SectionLink";
-import { Container } from "../../../components/Container";
-import { Column } from "../../../components/Column";
+import React from 'react';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import styled from 'styled-components';
+import { SectionTitle } from '../../../components/SectionTitle';
+import { SectionDescription } from '../../../components/SectionDescription';
+import { SectionText } from '../../../components/SectionText';
+import { SectionLink } from '../../../components/SectionLink';
+import { Container } from '../../../components/Container';
+import { Column } from '../../../components/Column';
 
 export const About = () => {
   return (
     <StyledAbout>
       <Container>
-        <FlexWrapper justify={"space-between"}>
+        <FlexWrapper justify={'space-between'} wrap={'wrap'}>
           <Column>
             <SectionTitle>who am i</SectionTitle>
             <SectionDescription>
@@ -32,7 +32,7 @@ export const About = () => {
               doloribus asperiores repellat quia voluptas sit aspernatur te
               natus error sit voluptatem accusan.
             </SectionText>
-            <SectionLink href={""}>about me</SectionLink>
+            <SectionLink href={''}>about me</SectionLink>
           </Column>
         </FlexWrapper>
       </Container>

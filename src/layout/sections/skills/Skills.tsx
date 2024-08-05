@@ -12,7 +12,7 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <FlexWrapper justify={'space-between'}>
+        <FlexWrapper justify={'space-between'} wrap={'wrap'}>
           <Column>
             <SectionTitle>my skills</SectionTitle>
             <SectionDescription>
