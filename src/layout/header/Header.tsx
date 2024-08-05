@@ -1,43 +1,40 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Logo } from '../../components/logo/Logo';
-import { Menu } from '../../components/menu/Menu';
-import { Container } from '../../components/Container';
-import { MobileMenu } from '../../components/mobileMenu/MobileMenu';
+import React from "react";
+import { Logo } from "../../components/logo/Logo";
+import { Container } from "../../components/Container";
+import { DesktopMenu } from "../../components/navigation/desktopMenu/DesktopMenu";
+import { MobileMenu } from "../../components/navigation/mobileMenu/MobileMenu";
+import { S } from "./Header_Styles";
 
 const items = [
-  'home',
-  'who am i',
-  'my skills',
-  'portfolio',
-  'testimonials',
-  'contacts',
+  "home",
+  "who am i",
+  "my skills",
+  "portfolio",
+  "testimonials",
+  "contacts",
 ];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 920;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <Logo />
-        <Menu menuItems={items} />
-        <MobileMenu menuItems={items} />
+        {width < breakpoint ? (
+          <MobileMenu menuItems={items} />
+        ) : (
+          <DesktopMenu menuItems={items} />
+        )}
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 2px 10px 0px rgba(130, 130, 130, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999999;
-
-  ${Container} {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-`;

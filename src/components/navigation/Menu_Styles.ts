@@ -1,42 +1,100 @@
-import React from "react";
 import { css, styled } from "styled-components";
+import { font } from "../../styles/Common";
 import { theme } from "../../styles/Theme";
-
-type MobileMenuPropsType = {
-  menuItems: Array<string>;
-};
-
-export const MobileMenu: React.FC<MobileMenuPropsType> = (
-  props: MobileMenuPropsType
-) => {
-  return (
-    <StyledMobileNav>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
-      <MobileMenuWrapper isOpen={false}>
-        <ul role='menu'>
-          {props.menuItems.map((item: string, index: number) => {
-            return (
-              <li key={index} role='menuitem'>
-                <a href='#'>{item}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </MobileMenuWrapper>
-    </StyledMobileNav>
-  );
-};
-
-const StyledMobileNav = styled.nav`
-  display: none;
-
-  @media ${theme.media.bigTablet} {
-    display: block;
+// Gallery Menu
+const GalleryMenu = styled.nav`
+  ul {
+    display: flex;
   }
-`;
 
+  li + li {
+    margin-left: 35px;
+  }
+
+  a {
+    ${font({
+      family: '"Inconsolata", sans-serif',
+      weight: 400,
+      lineHeight: "126%",
+      color: theme.colors.secondaryFont,
+      Fmax: 16,
+      Fmin: 14,
+    })}
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 0;
+      background-color: ${theme.colors.secondaryFont};
+
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+
+      transition: all ease 0.4s;
+    }
+    &:hover {
+      &:before {
+        content: "";
+        width: 100%;
+      }
+    }
+  }
+
+`;
+// Desktop Menu
+const DesktopMenu = styled.nav`
+  ul {
+    display: flex;
+  }
+
+  li + li {
+    margin-left: 35px;
+  }
+
+  a {
+    ${font({
+      family: '"Inconsolata", sans-serif',
+      weight: 400,
+      lineHeight: "126%",
+      color: theme.colors.secondaryFont,
+      Fmax: 16,
+      Fmin: 14,
+    })}
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 0;
+      background-color: ${theme.colors.secondaryFont};
+
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+
+      transition: all ease 0.4s;
+    }
+    &:hover {
+      &:before {
+        content: "";
+        width: 100%;
+      }
+    }
+  }
+
+`;
+// Mobile Menu
+const MobileMenu = styled.nav`
+
+`;
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: absolute;
   width: 32px;
@@ -130,3 +188,11 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
       width: 320px;
     `}
 `;
+
+export const S = {
+  GalleryMenu,
+  DesktopMenu,
+  MobileMenu,
+  BurgerButton,
+  MobileMenuWrapper,
+}
