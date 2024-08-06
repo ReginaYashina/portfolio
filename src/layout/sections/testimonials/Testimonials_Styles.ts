@@ -123,8 +123,10 @@ const Dot = styled.div`
     transform: scale(1.1);
   }
 
-  &:hover {
-    transform: scale(0.9);
+  @media ${theme.media.hover} {
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 
   @media ${theme.media.bigTablet} {

@@ -160,9 +160,11 @@ const MainLink = styled.a`
     transition: all 0.5s ease;
   }
 
-  &:hover {
-    color: ${theme.colors.lightFont};
-    background-color: ${theme.colors.mainBtnBg};
+  @media ${theme.media.hover} {
+    &:hover {
+      color: ${theme.colors.lightFont};
+      background-color: ${theme.colors.mainBtnBg};
+    }
   }
 
   @media ${theme.media.bigTablet} {

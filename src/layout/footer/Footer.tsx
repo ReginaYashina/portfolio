@@ -99,9 +99,11 @@ const Mail = styled.a`
   letter-spacing: 0.01em;
   border-bottom: 2px solid ${theme.colors.primaryFont};
   cursor: pointer;
-
   transition: all ease 0.3s;
-  &:hover {
-    transform: scale(0.98);
+
+  @media ${theme.media.hover} {
+    &:hover {
+      transform: scale(0.98);
+    }
   }
 `;

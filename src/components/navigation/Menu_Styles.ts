@@ -1,6 +1,6 @@
-import { css, styled } from "styled-components";
-import { font } from "../../styles/Common";
-import { theme } from "../../styles/Theme";
+import { css, styled } from 'styled-components';
+import { font } from '../../styles/Common';
+import { theme } from '../../styles/Theme';
 // Gallery Menu
 const GalleryMenu = styled.nav`
   ul {
@@ -15,7 +15,7 @@ const GalleryMenu = styled.nav`
     ${font({
       family: '"Inconsolata", sans-serif',
       weight: 400,
-      lineHeight: "126%",
+      lineHeight: '126%',
       color: theme.colors.secondaryFont,
       Fmax: 16,
       Fmin: 14,
@@ -26,7 +26,7 @@ const GalleryMenu = styled.nav`
     position: relative;
 
     &:before {
-      content: "";
+      content: '';
       height: 1px;
       width: 0;
       background-color: ${theme.colors.secondaryFont};
@@ -37,14 +37,16 @@ const GalleryMenu = styled.nav`
 
       transition: all ease 0.4s;
     }
-    &:hover {
-      &:before {
-        content: "";
-        width: 100%;
+
+    @media ${theme.media.hover} {
+      &:hover {
+        &:before {
+          content: '';
+          width: 100%;
+        }
       }
     }
   }
-
 `;
 // Desktop Menu
 const DesktopMenu = styled.nav`
@@ -60,7 +62,7 @@ const DesktopMenu = styled.nav`
     ${font({
       family: '"Inconsolata", sans-serif',
       weight: 400,
-      lineHeight: "126%",
+      lineHeight: '126%',
       color: theme.colors.secondaryFont,
       Fmax: 16,
       Fmin: 14,
@@ -71,7 +73,7 @@ const DesktopMenu = styled.nav`
     position: relative;
 
     &:before {
-      content: "";
+      content: '';
       height: 1px;
       width: 0;
       background-color: ${theme.colors.secondaryFont};
@@ -82,19 +84,19 @@ const DesktopMenu = styled.nav`
 
       transition: all ease 0.4s;
     }
-    &:hover {
-      &:before {
-        content: "";
-        width: 100%;
+
+    @media ${theme.media.hover} {
+      &:hover {
+        &:before {
+          content: '';
+          width: 100%;
+        }
       }
     }
   }
-
 `;
 // Mobile Menu
-const MobileMenu = styled.nav`
-
-`;
+const MobileMenu = styled.nav``;
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: absolute;
   width: 32px;
@@ -113,7 +115,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     right: 0;
 
     &:before {
-      content: "";
+      content: '';
       display: block;
       width: 27px;
       height: 3px;
@@ -124,7 +126,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
 
     &:after {
-      content: "";
+      content: '';
       display: block;
       width: 29px;
       height: 3px;
@@ -142,13 +144,13 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         background-color: transparent;
 
         &:before {
-          content: "";
+          content: '';
           width: 29px;
           transform: rotate(-45deg);
         }
 
         &:after {
-          content: "";
+          content: '';
           transform: rotate(45deg);
         }
       }
@@ -173,7 +175,7 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
 
   a {
     color: ${theme.colors.secondaryFont};
-    font-family: "Inconsolata", sans-serif;
+    font-family: 'Inconsolata', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 126%;
@@ -195,4 +197,4 @@ export const S = {
   MobileMenu,
   BurgerButton,
   MobileMenuWrapper,
-}
+};

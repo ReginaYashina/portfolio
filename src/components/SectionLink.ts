@@ -17,10 +17,12 @@ export const SectionLink = styled.a`
   border: 1px solid ${theme.colors.primaryFont};
   transition: all 0.5s ease;
 
-  &:hover {
-    background-color: ${theme.colors.lightFont};
-    color: ${theme.colors.primaryFont};
-    border: 1px solid ${theme.colors.primaryFont};
+  @media ${theme.media.hover} {
+    &:hover {
+      background-color: ${theme.colors.lightFont};
+      color: ${theme.colors.primaryFont};
+      border: 1px solid ${theme.colors.primaryFont};
+    }
   }
 
   @media ${theme.media.bigTablet} {

@@ -32,9 +32,11 @@ const GalleryItem = styled.img.attrs(({ alt }) => ({
   transition: all 0.5s ease;
   object-fit: cover;
 
-  &:hover {
-    filter: hue-rotate(270deg);
-    transform: scale(0.99);
+  @media ${theme.media.hover} {
+    &:hover {
+      filter: hue-rotate(270deg);
+      transform: scale(0.99);
+    }
   }
 `;
 // Works

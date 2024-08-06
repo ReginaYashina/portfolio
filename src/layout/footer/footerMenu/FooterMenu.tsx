@@ -51,8 +51,11 @@ const StyledNav = styled.nav`
 
   li {
     transition: all ease 0.3s;
-    &:hover {
-      transform: scale(0.95);
+
+    @media ${theme.media.hover} {
+      &:hover {
+        transform: scale(0.95);
+      }
     }
   }
 
