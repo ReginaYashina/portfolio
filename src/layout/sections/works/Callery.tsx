@@ -1,5 +1,4 @@
 import React from 'react';
-import { styled } from 'styled-components';
 import { SectionLink } from '../../../components/SectionLink';
 import galleryImg1 from '../../../assets/img/works/1.jpg';
 import galleryImg2 from '../../../assets/img/works/2.jpg';
@@ -11,62 +10,29 @@ import galleryImg7 from '../../../assets/img/works/7.jpg';
 import galleryImg8 from '../../../assets/img/works/8.jpg';
 import galleryImg9 from '../../../assets/img/works/9.jpg';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { theme } from '../../../styles/Theme';
+import { S } from './Works_Styles';
 
-export const Gallery = () => {
+export const Gallery: React.FC = () => {
   return (
-    <StyledGallery>
+    <S.Gallery>
       <FlexWrapper gap={'40px'} justify={'space-around'}>
         <FlexWrapper direction={'column'} gap={'40px'}>
-          <GalleryItem src={galleryImg1} alt='Gallery Item 1' />
-          <GalleryItem src={galleryImg4} alt='' />
-          <GalleryItem src={galleryImg7} alt='' />
+          <S.GalleryItem src={galleryImg1} alt='Gallery Item 1' />
+          <S.GalleryItem src={galleryImg4} alt='' />
+          <S.GalleryItem src={galleryImg7} alt='' />
         </FlexWrapper>
         <FlexWrapper direction={'column'} gap={'40px'}>
-          <GalleryItem src={galleryImg2} alt='' />
-          <GalleryItem src={galleryImg5} alt='' />
-          <GalleryItem src={galleryImg8} alt='' />
+          <S.GalleryItem src={galleryImg2} alt='' />
+          <S.GalleryItem src={galleryImg5} alt='' />
+          <S.GalleryItem src={galleryImg8} alt='' />
         </FlexWrapper>
         <FlexWrapper direction={'column'} gap={'40px'}>
-          <GalleryItem src={galleryImg3} alt='' />
-          <GalleryItem src={galleryImg6} alt='' />
-          <GalleryItem src={galleryImg9} alt='' />
+          <S.GalleryItem src={galleryImg3} alt='' />
+          <S.GalleryItem src={galleryImg6} alt='' />
+          <S.GalleryItem src={galleryImg9} alt='' />
         </FlexWrapper>
       </FlexWrapper>
       <SectionLink href={''}>view all works</SectionLink>
-    </StyledGallery>
+    </S.Gallery>
   );
 };
-
-const StyledGallery = styled.div`
-  text-align: center;
-  ${FlexWrapper} {
-    @media ${theme.media.bigTablet} {
-      gap: 10px;
-    }
-
-    @media ${theme.media.mobile} {
-      flex-wrap: wrap;
-      flex-basis: 100%;
-    }
-  }
-
-  ${SectionLink} {
-    margin-top: 84px;
-  }
-`;
-
-const GalleryItem = styled.img.attrs(({ alt }) => ({
-  alt: alt || 'Gallery Item',
-}))`
-  border-radius: 8px;
-  max-width: 100%;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  object-fit: cover;
-
-  &:hover {
-    filter: hue-rotate(270deg);
-    transform: scale(0.99);
-  }
-`;
