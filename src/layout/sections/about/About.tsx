@@ -8,7 +8,7 @@ import { SectionLink } from '../../../components/SectionLink';
 import { Container } from '../../../components/Container';
 import { Column } from '../../../components/Column';
 
-export const About = () => {
+export const About: React.FC = () => {
   return (
     <StyledAbout>
       <Container>

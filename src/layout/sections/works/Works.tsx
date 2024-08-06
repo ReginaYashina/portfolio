@@ -1,10 +1,8 @@
 import React from 'react';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionDescription } from '../../../components/SectionDescription';
-import { styled } from 'styled-components';
 import { Container } from '../../../components/Container';
 import { Gallery } from './Callery';
-import { theme } from '../../../styles/Theme';
 import { GalleryMenu } from '../../../components/navigation/galleryMenu/DesktopMenu';
 import { S } from './Works_Styles';
 
