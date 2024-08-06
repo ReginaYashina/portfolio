@@ -102,12 +102,11 @@ const Dots = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
-  right: 0;
+  right: 15px;
   bottom: 0;
   cursor: pointer;
 
   @media ${theme.media.tablet} {
-    right: 15px;
     bottom: -70px;
   }
 `;

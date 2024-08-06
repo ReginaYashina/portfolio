@@ -56,6 +56,22 @@ const Works = styled.section`
   ul {
     justify-content: center;
     margin-bottom: 62px;
+
+    @media ${theme.media.bigTablet} {
+      justify-content: flex-end;
+      margin-bottom: 30px;
+    }
+
+    li + li {
+      @media ${theme.media.mobile} {
+        margin-left: 20px;
+      }
+    }
+    a {
+      @media ${theme.media.mobile} {
+        letter-spacing: 0.1em;
+      }
+    }
   }
 `;
 
