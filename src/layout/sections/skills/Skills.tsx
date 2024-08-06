@@ -1,16 +1,16 @@
 import React from 'react';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionDescription } from '../../../components/SectionDescription';
 import { SectionText } from '../../../components/SectionText';
 import { Skill } from './skill/Skill';
 import { Column } from '../../../components/Column';
 import { Container } from '../../../components/Container';
+import { S } from './Skills_Styles';
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <FlexWrapper justify={'space-between'} wrap={'wrap'}>
           <Column>
@@ -31,12 +31,6 @@ export const Skills = () => {
           </Column>
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.section`
-  & ${SectionText} {
-    margin-bottom: 18px;
-  }
-`;
