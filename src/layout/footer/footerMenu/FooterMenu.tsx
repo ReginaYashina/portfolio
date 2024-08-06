@@ -1,11 +1,9 @@
 import React from 'react';
-import { styled } from 'styled-components';
-import { theme } from '../../../styles/Theme';
 import facebook from '../../../assets/img/facebook.svg';
 import twitter from '../../../assets/img/twitter.svg';
 import linkedin from '../../../assets/img/linkedin.svg';
 import youtube from '../../../assets/img/youtube.svg';
-import { font } from '../../../styles/Common';
+import { S } from '../Footer_Styles';
 
 const data = [
   {
@@ -26,9 +24,9 @@ const data = [
   },
 ];
 
-export const FooterMenu = () => {
+export const FooterMenu: React.FC = () => {
   return (
-    <StyledNav>
+    <S.Menu>
       <ul>
         {data.map((elem, index) => {
           return (
@@ -41,61 +39,6 @@ export const FooterMenu = () => {
           );
         })}
       </ul>
-    </StyledNav>
+    </S.Menu>
   );
 };
-
-const StyledNav = styled.nav`
-  ul {
-    display: flex;
-  }
-
-  li {
-    transition: all ease 0.3s;
-
-    @media ${theme.media.hover} {
-      &:hover {
-        transform: scale(0.95);
-      }
-    }
-  }
-
-  li + li {
-    margin-left: 35px;
-    @media ${theme.media.smallDesktop} {
-      margin-left: 20px;
-    }
-  }
-
-  a {
-    ${font({
-      weight: 400,
-      lineHeight: '225%',
-      color: theme.colors.secondaryFont,
-      Fmax: 20,
-      Fmin: 16,
-    })}
-
-    @media ${theme.media.mobile} {
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-    }
-  }
-  span {
-    border-bottom: 1px solid ${theme.colors.secondaryFont};
-    @media ${theme.media.mobile} {
-      display: none;
-    }
-  }
-  img {
-    margin-right: 10px;
-
-    @media ${theme.media.mobile} {
-      margin-right: 0;
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-    }
-  }
-`;
