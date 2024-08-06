@@ -19,7 +19,7 @@ const Testimonials = styled.section`
     justify-content: end;
     padding: 125px 0 137px;
 
-    @media (max-width: 1900px) {
+    @media ${theme.media.smallDesktop} {
       align-items: center;
     }
 
@@ -47,7 +47,7 @@ const ImageWrapper = styled.div`
   flex: 0 0 35%;
   padding-bottom: 34%;
   position: relative;
-  @media (max-width: 1900px) {
+  @media ${theme.media.smallDesktop} {
     padding-bottom: 50%;
   }
   @media ${theme.media.tablet} {
@@ -73,7 +73,7 @@ const Text = styled.p`
   })}
   letter-spacing: 0.01em;
   margin: 60px 0 24px;
-  @media (max-width: 1900px) {
+  @media ${theme.media.smallDesktop} {
     line-height: 1.4;
     margin: 25px 0;
   }

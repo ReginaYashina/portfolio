@@ -5,6 +5,7 @@ import facebook from '../../../assets/img/facebook.svg';
 import twitter from '../../../assets/img/twitter.svg';
 import linkedin from '../../../assets/img/linkedin.svg';
 import youtube from '../../../assets/img/youtube.svg';
+import { font } from '../../../styles/Common';
 
 const data = [
   {
@@ -61,13 +62,19 @@ const StyledNav = styled.nav`
 
   li + li {
     margin-left: 35px;
+    @media ${theme.media.smallDesktop} {
+      margin-left: 20px;
+    }
   }
 
   a {
-    color: ${theme.colors.secondaryFont};
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 225%;
+    ${font({
+      weight: 400,
+      lineHeight: '225%',
+      color: theme.colors.secondaryFont,
+      Fmax: 20,
+      Fmin: 16,
+    })}
 
     @media ${theme.media.mobile} {
       display: inline-block;

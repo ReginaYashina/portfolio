@@ -12,6 +12,7 @@ export const theme = {
   },
 
   media: {
+    smallDesktop: 'screen and (max-width: 1900px)',
     bigTablet: 'screen and (max-width: 920px)',
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
