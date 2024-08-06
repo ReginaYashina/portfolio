@@ -7,6 +7,7 @@ import { SectionText } from '../../../components/SectionText';
 import { SectionLink } from '../../../components/SectionLink';
 import { Container } from '../../../components/Container';
 import { Column } from '../../../components/Column';
+import { theme } from '../../../styles/Theme';
 
 export const About: React.FC = () => {
   return (
@@ -43,5 +44,9 @@ export const About: React.FC = () => {
 const StyledAbout = styled.section`
   ${SectionLink} {
     margin: 33px 0 0 60px;
+
+    @media ${theme.media.bigTablet} {
+      margin-left: 0;
+    }
   }
 `;

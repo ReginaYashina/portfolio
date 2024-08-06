@@ -167,7 +167,7 @@ const MainLink = styled.a`
     }
   }
 
-  @media ${theme.media.bigTablet} {
+  @media ${theme.media.smallDesktop} {
     margin-bottom: 30px;
   }
 
