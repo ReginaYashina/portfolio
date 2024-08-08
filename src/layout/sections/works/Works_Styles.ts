@@ -1,33 +1,41 @@
-import { styled } from 'styled-components';
-import { FlexWrapper } from '../../../components/FlexWrapper';
-import { SectionLink } from '../../../components/SectionLink';
-import { theme } from '../../../styles/Theme';
-import { SectionTitle } from '../../../components/SectionTitle';
-import { SectionDescription } from '../../../components/SectionDescription';
+import { styled } from 'styled-components'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { SectionLink } from '../../../components/SectionLink'
+import { theme } from '../../../styles/Theme'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { SectionDescription } from '../../../components/SectionDescription'
 
 // Gallery
 const Gallery = styled.div`
   text-align: center;
   ${FlexWrapper} {
-    @media ${theme.media.bigTablet} {
+    max-height: 1146px;
+    @media ${theme.media.smallDesktop} {
       gap: 10px;
     }
-
+    @media (max-width: 977px) {
+      max-height: 1000px;
+    }
+    @media (max-width: 856px) {
+      max-height: 1800px;
+    }
+    @media (max-width: 661px) {
+      max-height: 1500px;
+    }
     @media ${theme.media.mobile} {
-      flex-wrap: wrap;
-      flex-basis: 100%;
+      max-height: none;
     }
   }
 
   ${SectionLink} {
     margin-top: 84px;
   }
-`;
+`
 const GalleryItem = styled.img.attrs(({ alt }) => ({
   alt: alt || 'Gallery Item',
 }))`
   border-radius: 8px;
-  max-width: 100%;
+  max-width: 33%;
   cursor: pointer;
   transition: all 0.5s ease;
   object-fit: cover;
@@ -38,7 +46,14 @@ const GalleryItem = styled.img.attrs(({ alt }) => ({
       transform: scale(0.99);
     }
   }
-`;
+
+  @media (max-width: 856px) {
+    max-width: 48%;
+  }
+  @media ${theme.media.mobile} {
+    max-width: 100%;
+  }
+`
 // Works
 const Works = styled.section`
   ${SectionTitle} {
@@ -75,10 +90,10 @@ const Works = styled.section`
       }
     }
   }
-`;
+`
 
 export const S = {
   Gallery,
   GalleryItem,
   Works,
-};
+}

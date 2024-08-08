@@ -1,12 +1,12 @@
-import React from 'react';
-import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { S } from '../Skills_Styles';
+import React from 'react'
+import { FlexWrapper } from '../../../../components/FlexWrapper'
+import { S } from '../Skills_Styles'
 
-type SkillPropsType = {
-  progressTitle?: string;
-  percent?: string;
-  progress?: string;
-};
+export type SkillPropsType = {
+  progressTitle?: string
+  percent?: string
+  progress?: string
+}
 
 export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
   return (
@@ -20,5 +20,5 @@ export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
         </S.SkillProgress>
       </S.SkillProgressWrapper>
     </S.Skill>
-  );
-};
+  )
+}

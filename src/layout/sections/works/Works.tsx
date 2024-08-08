@@ -3,10 +3,30 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionDescription } from '../../../components/SectionDescription';
 import { Container } from '../../../components/Container';
 import { Gallery } from './Callery';
-import { GalleryMenu } from '../../../components/navigation/galleryMenu/DesktopMenu';
+import { GalleryMenu } from '../../../components/navigation/galleryMenu/GalleryMenu';
 import { S } from './Works_Styles';
 
-const items = ['All', 'Landing page', 'React', 'SPA'];
+const tabsItems: Array<{
+  title: string;
+  status: 'all' | 'landing' | 'react' | 'spa';
+}> = [
+  {
+    title: 'all',
+    status: 'all',
+  },
+  {
+    title: 'Landing page',
+    status: 'landing',
+  },
+  {
+    title: 'React',
+    status: 'react',
+  },
+  {
+    title: 'SPA',
+    status: 'spa',
+  },
+];
 
 export const Works: React.FC = () => {
   return (
@@ -14,7 +34,7 @@ export const Works: React.FC = () => {
       <Container>
         <SectionTitle>portfolio</SectionTitle>
         <SectionDescription>Latest Works</SectionDescription>
-        <GalleryMenu menuItems={items} />
+        <GalleryMenu tabsItems={tabsItems} />
         <Gallery />
       </Container>
     </S.Works>
